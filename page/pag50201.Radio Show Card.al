@@ -19,6 +19,10 @@ page 50201 "Radio Show Card"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Name"; "Name")
+                {
+                    ApplicationArea = Basic;
+                }
                 field("Run Time"; "Run Time")
                 {
                     ApplicationArea = Basic;

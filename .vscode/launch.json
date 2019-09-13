@@ -4,7 +4,7 @@
         {
             "type": "al",
             "request": "launch",
-            "name": "Your own server",
+            "name": "NavBCDev",
             "server": "http://NavBCDev",
             "serverInstance": "NAV",
             "authentication": "UserPassword",

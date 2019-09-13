@@ -19,6 +19,10 @@ page 50200 "Radio Show List"
                 {
                     ApplicationArea = Basic;
                 }
+                field("Name"; "Name")
+                {
+                    ApplicationArea = Basic;
+                }
                 field("Run Time"; "Run Time")
                 {
                     ApplicationArea = Basic;
