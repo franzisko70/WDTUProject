@@ -1,0 +1,26 @@
+{
+  "id": "db4e0da2-98e2-40aa-8bc3-1c62ea86d235",
+  "name": "WDTUProject",
+  "publisher": "Default publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://WDTUProject.com/help/",
+  "showMyCode": true,
+  "runtime": "3.0"
+}
