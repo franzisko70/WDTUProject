@@ -8,7 +8,7 @@
             "server": "http://NavBCDev",
             "serverInstance": "NAV",
             "authentication": "UserPassword",
-            "startupObjectId": 22,
+            "startupObjectId": 50201,
             "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,

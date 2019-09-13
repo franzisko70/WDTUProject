@@ -1,15 +1,15 @@
-page 50100 "Radio Show List"
+page 50201 "Radio Show Card"
 {
-    PageType = List;
+    PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = Administration;
     SourceTable = "Radio Show";
 
     layout
     {
         area(Content)
         {
-            repeater(GroupName)
+            group(General)
             {
                 field("No."; "No.")
                 {
@@ -51,4 +51,22 @@ page 50100 "Radio Show List"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action(ActionName)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+
+                end;
+            }
+        }
+    }
+
+    var
+        myInt: Integer;
 }
