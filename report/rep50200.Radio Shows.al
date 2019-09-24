@@ -2,7 +2,8 @@ report 50200 "Radio Shows"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-
+    WordLayout = 'RadioShow.docx';
+    RDLCLayout = 'RadioShow.RDLC';
     dataset
     {
         dataitem(DataItemName; "Radio Show")
