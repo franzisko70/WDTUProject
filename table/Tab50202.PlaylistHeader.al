@@ -2,7 +2,7 @@ table 50202 "Playlist Header"
 {
     Caption = 'Playlist Header';
     DataClassification = ToBeClassified;
-    
+
     fields
     {
         field(1; "No."; Code[20])
@@ -14,6 +14,8 @@ table 50202 "Playlist Header"
         {
             Caption = 'Radio Show No.';
             DataClassification = ToBeClassified;
+            //TODO: Controllare se serve
+            TableRelation = "Radio Show";
         }
         field(20; Description; Text[50])
         {
@@ -48,5 +50,5 @@ table 50202 "Playlist Header"
             Clustered = true;
         }
     }
-    
+
 }

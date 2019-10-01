@@ -15,6 +15,10 @@ table 50204 "Playlist Item Rate"
         {
             Caption = 'Source No.';
             DataClassification = ToBeClassified;
+            TableRelation = if ("Source Type" = const(Vendor)) Vendor."No."
+            else
+            if ("Source Type" = const(Customer)) Customer."No.";
+
         }
         field(10; "Item No."; Code[20])
         {
@@ -40,6 +44,9 @@ table 50204 "Playlist Item Rate"
         {
             Caption = 'Publiher Code';
             DataClassification = ToBeClassified;
+            //TODO: Controllare se serve
+            TableRelation = Publisher;
+
         }
     }
     keys

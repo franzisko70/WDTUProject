@@ -34,6 +34,8 @@ table 50206 "Listenership Entry"
         {
             Caption = 'Radio Show No.';
             DataClassification = ToBeClassified;
+            //TODO: Controllare se serve
+            TableRelation = "Radio Show";
         }
         field(60; "Listener Count"; Decimal)
         {
@@ -57,6 +59,10 @@ table 50206 "Listenership Entry"
         key(PK; "Entry No.")
         {
             Clustered = true;
+        }
+        key(Reporting; "Radio Show No.", Date, "Start Time", "Age Demographic")
+        {
+            SumIndexFields = "Listener Count", "Audience Share";
         }
     }
 

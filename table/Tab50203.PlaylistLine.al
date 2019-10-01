@@ -25,6 +25,11 @@ table 50203 "Playlist Line"
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
+            TableRelation = if (Type = const(Resource)) Resource."No."
+            else
+            if (Type = const(Show)) "Radio Show"."No."
+            else
+            if (Type = const(Item)) Item."No.";
         }
         field(30; "Data Format"; Option)
         {
@@ -36,6 +41,8 @@ table 50203 "Playlist Line"
         {
             Caption = 'Publisher';
             DataClassification = ToBeClassified;
+            //TODO: Controllare se serve
+            TableRelation = Publisher;
         }
         field(50; Description; Text[50])
         {
@@ -60,7 +67,7 @@ table 50203 "Playlist Line"
     }
     keys
     {
-        key(PK; "Documento No.")
+        key(PK; "Documento No.", "Line No.")
         {
             Clustered = true;
         }

@@ -14,6 +14,8 @@ table 50205 "Radio Show Entry"
         {
             Caption = 'Radio Show No.';
             DataClassification = ToBeClassified;
+            //TODO: Controllare se serve
+            TableRelation = "Radio Show";
         }
         field(20; Type; Option)
         {
@@ -25,6 +27,11 @@ table 50205 "Radio Show Entry"
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
+            TableRelation = if (Type = const(Resource)) Resource."No."
+            else
+            if (Type = const(Show)) "Radio Show"."No."
+            else
+            if (Type = const(Item)) Item."No.";
         }
         field(40; "Data Format"; Option)
         {
@@ -66,6 +73,9 @@ table 50205 "Radio Show Entry"
         {
             Caption = 'Publisher Code';
             DataClassification = ToBeClassified;
+            //TODO: Controllare se serve
+            TableRelation = Publisher;
+
         }
     }
     keys
@@ -73,6 +83,14 @@ table 50205 "Radio Show Entry"
         key(PK; "Entry No.")
         {
             Clustered = true;
+        }
+        key(Reporting; "Radio Show No.", Date)
+        {
+            SumIndexFields = "Fee Amount";
+        }
+        key(Reporting2; "No.", Date)
+        {
+            SumIndexFields = "Fee Amount";
         }
     }
 
